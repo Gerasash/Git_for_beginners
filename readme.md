@@ -97,16 +97,14 @@ HEAD -- это голова.
 Статусы файлов:
 <тут пустая строка!>
 
-```mermaid
-%% описание схемы
-```
-
 <и тут пустая строка!>
 
 ```mermaid
 graph LR;
   untracked -- "git add" --> staged;
-  staged    -- "???"     --> tracked/comitted;
+  staged    -- "git commit" --> tracked/comitted;
+  staged    -- "git add" --> modifed;
+  tracked -- "some changes" --> modifed;
 
 %% стрелка без текста для примера:
   A --> B;
